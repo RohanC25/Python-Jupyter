@@ -29,7 +29,7 @@ Also contains player names with their age and number of gold , silver and bronze
 * Pyspark
 * Use of MySQL Workbench
 
-## Questions - For Python - Data_Science 
+## Questions - For Python 
 - Please do the basic exploration of the data. Remember the dataset contains information from different years. So whatever steps you perform should make logical sense.
 - Deal with missing values appropriately. You can either remove them or fill them, but a proper justification is required.
 - Duplicates in the dataset introduces bias in the study. Please check and perform appropriate steps.
