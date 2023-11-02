@@ -6,7 +6,11 @@ select country, avg(total_medal) from olympic_datas  group by country;     # use
 select country, sum(gold_medal) from  olympic_datas group by country order by (sum(gold_medal)) desc;  # use group by and order by sum of gold_medal
 
 -- Q3. Display the list of people and the medals they have won in descending order, grouped by their country
-select  name, sum(total_medal) from olympic_datas group by name order by (sum(total_medal)) desc;  # group by name and order by sum of total medal
+select o.name, c.country, sum(o.total_medal) as Total_medals from olympix_data o
+JOIN (select country, sum(total_medal) as Total_medals from olympix_data
+group by country) c
+ON o.country = c.country
+group by o.name, c.country, c.Total_medals order by (sum(o.total_medal)) desc ;
 
 -- Q4. Display the list of people with the medals they have won according to their their age
 select name, age, sum(total_medal) from olympic_datas  group by name order by age;  # use group by name order by age in ascending
